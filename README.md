@@ -27,7 +27,7 @@ O Sistema Core Humans oferece um conjunto robusto de ferramentas para gerenciar 
     Cadastro, Leitura, Atualização e Exclusão (CRUD) Busca: Todos, Por ID e Busca por nome da classe departamentos.
 3.  **Gestão de Usuários:**
     Cadastro, Leitura e Atualização (CRUD) Busca: Todos, Por ID e Busca por usuários do sistema (para acesso e permissões).
-4.  Associação de Colaboradores a Departamentos.
+4.  Relacionamento de Colaboradores a Departamentos.
 
 ------
 
