@@ -153,7 +153,7 @@ direction TB
 ## 🗃️ Diagrama Entidade-Relacionamento (DER)
 
 <div align="center">
-  <img src="https://media.discordapp.net/attachments/1356053908119879819/1378014150676189275/image.png?ex=683b0f2f&is=6839bdaf&hm=8dc8ba45e4e00eabccc21894024be79d85803cc81a03501921f924fa3382d659&=&format=webp&quality=lossless" alt="Logo" width="300" height="300" />
+    <img src="https://ik.imagekit.io/gekut9ghjx/diagrama.webp" title="source: imagekit.io" />
 </div>
 
 ------
