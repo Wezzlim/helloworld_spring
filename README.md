@@ -21,13 +21,13 @@ O Sistema Core Humans oferece um conjunto robusto de ferramentas para gerenciar 
 
 ### Principais Funcionalidades
 
-*.  **Gestão de Colaboradores:**
+1.  **Gestão de Colaboradores:**
     Cadastro, Leitura, Atualização e Exclusão (CRUD ) Busca: Todos, Por ID e Busca por nome da classe colaboradores.
-*.  **Gestão de Departamentos:**
+2.  **Gestão de Departamentos:**
     Cadastro, Leitura, Atualização e Exclusão (CRUD) Busca: Todos, Por ID e Busca por nome da classe departamentos.
-*.  **Gestão de Usuários:**
+3.  **Gestão de Usuários:**
     Cadastro, Leitura e Atualização (CRUD) Busca: Todos, Por ID e Busca por usuários do sistema (para acesso e permissões).
-*.  Associação de Colaboradores a Departamentos.
+4.  Associação de Colaboradores a Departamentos.
 
 ------
 
