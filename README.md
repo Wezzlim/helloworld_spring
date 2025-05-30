@@ -45,22 +45,22 @@ direction TB
     -Departamento departamento  
 
     +getId() : Long  
-    +setId(Long id) : void  
+    +setId(Long id) : INT  
 
     +getSalario() : BigDecimal  
-    +setSalario(BigDecimal salario) : void  
+    +setSalario(BigDecimal salario) :   
 
     +getCargo() : String  
-    +setCargo(String cargo) : void  
+    +setCargo(String cargo) :   
 
     +getNomeColaborador() : String  
-    +setNomeColaborador(String nomeColaborador) : void  
+    +setNomeColaborador(String nomeColaborador) :   
 
     +getDataNascimento() : LocalDate  
-    +setDataNascimento(LocalDate dataNascimento) : void  
+    +setDataNascimento(LocalDate dataNascimento) :   
 
     +getDepartamento() : Departamento  
-    +setDepartamento(Departamento departamento) : void  
+    +setDepartamento(Departamento departamento) :   
     }
 
     class Departamento {
@@ -70,16 +70,16 @@ direction TB
     -List<Colaborador> colaborador
 
     +getId() : Long
-    +setId(Long id) : void
+    +setId(Long id) : 
 
     +getNome() : String
-    +setNome(String nome) : void
+    +setNome(String nome) : 
 
     +getOrcamento() : BigDecimal
-    +setOrcamento(BigDecimal orcamento) : void
+    +setOrcamento(BigDecimal orcamento) : 
 
     +getColaborador() : List<Colaborador>
-    +setColaborador(List<Colaborador> colaborador) : void
+    +setColaborador(List<Colaborador> colaborador) : 
     }
 
     class Usuario {
@@ -90,19 +90,19 @@ direction TB
     -String foto
 
     +getId() : Long
-    +setId(Long id) : void
+    +setId(Long id) : 
 
     +getNome() : String
-    +setNome(String nome) : void
+    +setNome(String nome) : 
 
     +getUsuario() : String
-    +setUsuario(String usuario) : void
+    +setUsuario(String usuario) : 
 
     +getSenha() : String
-    +setSenha(String senha) : void
+    +setSenha(String senha) : 
 
     +getFoto() : String
-    +setFoto(String foto) : void
+    +setFoto(String foto) : 
     }
 
     class ColaboradorController {
