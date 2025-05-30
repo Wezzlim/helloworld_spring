@@ -3,7 +3,7 @@
 <br />
 
 <div align="center">
-   <img src="[https://via.placeholder.com/300x300.png?text=Core+Humans+Logo](https://media.discordapp.net/attachments/1357233138757009438/1377991596167008328/NxZeaOxSQA6INansPej2aA.png?ex=683afa2e&is=6839a8ae&hm=9f8a57c514b5d59bfbdae4039faf6ae936f068a3e604302b8589b32824a49fad&=&format=webp&quality=lossless&width=1010&height=1010)" title="Core Humans Logo Placeholder" width="300" height="300" /> 
+  <img src="https://ik.imagekit.io/gekut9ghjx/Logo.webp" alt="Logo" width="300" height="300" />
 </div>
 
 
@@ -32,43 +32,112 @@ O Sistema Core Humans oferece um conjunto robusto de ferramentas para gerenciar 
 
 ```mermaid
 classDiagram
-direction LR
-
-    class ColaboradorController {
-        +CRUD operations for Colaborador
+direction TB
+    class ColaboradorRepository {
+	    +findAllByNomeColaboradorContainingIgnoreCase(String nomeColaborador)
     }
-
-    class DepartamentoController {
-        +CRUD operations for Departamento
+    class DepartamentoRepository {
+	    +findAllByNomeContainingIgnoreCase(String nome)
     }
-
-    class UsuarioController {
-        +CRUD operations for Usuario
+    class UsuarioRepository {
+	    +findAllByUsuarioContainingIgnoreCase(String usuario)
     }
 
     class Colaborador {
-        -Long id
-        -BigDecimal salario "@NotNull @Positive"
-        -String cargo "@NotBlank @Size(5-100)"
-        -String nomeColaborador "@NotBlank @Size(5-100)"
-        -LocalDate dataNascimento "@Past @JsonFormat(yyyy-MM-dd)"
-        -Departamento departamento "@ManyToOne @JsonIgnoreProperties"
+    -Long id  
+    -BigDecimal salario  
+    -String cargo  
+    -String nomeColaborador  
+    -LocalDate dataNascimento  
+    -Departamento departamento  
+
+    +getId() : Long  
+    +setId(Long id) : void  
+
+    +getSalario() : BigDecimal  
+    +setSalario(BigDecimal salario) : void  
+
+    +getCargo() : String  
+    +setCargo(String cargo) : void  
+
+    +getNomeColaborador() : String  
+    +setNomeColaborador(String nomeColaborador) : void  
+
+    +getDataNascimento() : LocalDate  
+    +setDataNascimento(LocalDate dataNascimento) : void  
+
+    +getDepartamento() : Departamento  
+    +setDepartamento(Departamento departamento) : void  
     }
 
     class Departamento {
-        -Long id
-        -String nome "@NotBlank @Size(5-100)"
-        -BigDecimal orcamento "@NotNull @Positive"
-        +List<Colaborador> colaborador "@OneToMany @JsonIgnoreProperties"
+    -Long id
+    -String nome
+    -BigDecimal orcamento
+    -List<Colaborador> colaborador
+
+    +getId() : Long
+    +setId(Long id) : void
+
+    +getNome() : String
+    +setNome(String nome) : void
+
+    +getOrcamento() : BigDecimal
+    +setOrcamento(BigDecimal orcamento) : void
+
+    +getColaborador() : List<Colaborador>
+    +setColaborador(List<Colaborador> colaborador) : void
     }
 
     class Usuario {
-        -Long id
-        -String nome "@NotBlank"
-        -String usuario "@NotBlank @Email (Login)"
-        -String senha "@NotBlank @Size(min=8)"
-        -String foto "@Size(max=5000)"
+    -Long id
+    -String nome
+    -String usuario
+    -String senha
+    -String foto
+
+    +getId() : Long
+    +setId(Long id) : void
+
+    +getNome() : String
+    +setNome(String nome) : void
+
+    +getUsuario() : String
+    +setUsuario(String usuario) : void
+
+    +getSenha() : String
+    +setSenha(String senha) : void
+
+    +getFoto() : String
+    +setFoto(String foto) : void
     }
+
+    class ColaboradorController {
+    +getAll()
+    +getById(Long id)
+    +getAllByNome(String nome)
+    +post(Colaborador colaborador)
+    +put(Colaborador colaborador)
+    +delete(Long id)
+    }
+
+    class DepartamentoController {
+    +getAll()
+    +getById(Long id)
+    +getAllByNome(String nome)
+    +post(Departamento departamento)
+    +put(Departamento departamento)
+    +delete(Long id)
+    }
+
+    class UsuarioController {
+    +getAll()
+    +getById(Long id)
+    +getAllByUsuario(String usuario)
+    +cadastrarUsuario(Usuario usuario)
+    +atualizarUsuario(Usuario usuario)
+    }
+
 
     ColaboradorController ..> Colaborador
     DepartamentoController ..> Departamento
