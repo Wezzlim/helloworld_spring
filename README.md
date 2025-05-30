@@ -21,10 +21,13 @@ O Sistema Core Humans oferece um conjunto robusto de ferramentas para gerenciar 
 
 ### Principais Funcionalidades
 
-1.  **Gestão de Colaboradores:** Cadastro, Leitura, Atualização e Exclusão (CRUD ) de dados de colaboradores.
-2.  **Gestão de Departamentos:** Cadastro, Leitura, Atualização e Exclusão (CRUD) de dados de departamentos.
-3.  **Gestão de Usuários:** Cadastro, Leitura e Atualização (CRUD) de usuários do sistema (para acesso e permissões).
-4.  Associação de Colaboradores a Departamentos.
+1.  **Gestão de Colaboradores:**
+2.  Cadastro, Leitura, Atualização e Exclusão (CRUD ) Busca: Todos, Por ID e Busca por nome da classe colaboradores.
+3.  **Gestão de Departamentos:**
+4.  Cadastro, Leitura, Atualização e Exclusão (CRUD) Busca: Todos, Por ID e Busca por nome da classe departamentos.
+5.  **Gestão de Usuários:**
+6.  Cadastro, Leitura e Atualização (CRUD) Busca: Todos, Por ID e Busca por usuários do sistema (para acesso e permissões).
+7.  Associação de Colaboradores a Departamentos.
 
 ------
 
@@ -33,16 +36,6 @@ O Sistema Core Humans oferece um conjunto robusto de ferramentas para gerenciar 
 ```mermaid
 classDiagram
 direction TB
-    class ColaboradorRepository {
-	    +findAllByNomeColaboradorContainingIgnoreCase(String nomeColaborador)
-    }
-    class DepartamentoRepository {
-	    +findAllByNomeContainingIgnoreCase(String nome)
-    }
-    class UsuarioRepository {
-	    +findAllByUsuarioContainingIgnoreCase(String usuario)
-    }
-
     class Colaborador {
     -Long id  
     -BigDecimal salario  
